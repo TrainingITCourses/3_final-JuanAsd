@@ -1,0 +1,15 @@
+<div *ngIf="launch as data; else loading">
+
+    <app-status-title>
+        {{data.name}}
+    </app-status-title>
+
+    <app-launch-detail [data]="data"></app-launch-detail>
+
+    <div style="margin-bottom:25px">
+        <a (click)="clickAtras()" [routerLink]=""><button>Atrás</button></a>
+    </div>
+</div>
+<ng-template #loading>
+    Cargando...
+</ng-template>

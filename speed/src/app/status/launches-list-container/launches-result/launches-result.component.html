@@ -1,0 +1,7 @@
+<div>
+  <ul *ngIf="data?.length>0">
+    <li *ngFor="let item of data">
+      <a [routerLink]="['/launch', item.id]">{{item.name}}</a>
+    </li>
+  </ul>
+</div>

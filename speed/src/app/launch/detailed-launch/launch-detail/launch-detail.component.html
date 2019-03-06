@@ -1,0 +1,8 @@
+<div>
+  <p>Fecha: {{data.net}}</p>
+  <p>Lugar: {{data.location.name}}</p>
+  <p>Programa espacial: {{data.lsp.name}}</p>
+  <p *ngIf="data.missions.length>0 && data.missions[0].typeName !== undefined && data.missions[0].typeName !== ''">Tipo de misión: {{data.missions[0].typeName}}</p>
+  <span *ngIf="data.missions.length>0 && data.missions[0].wikiURL !== undefined && data.missions[0].wikiURL !== ''">wikiURL: <a
+      href="{{data.missions[0].wikiURL}}">{{data.missions[0].wikiURL}}</a></span>
+</div>

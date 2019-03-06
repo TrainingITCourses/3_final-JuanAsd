@@ -1,0 +1,13 @@
+<div *ngIf="status">
+  <app-status-title>
+    Estado: {{status.name}}
+  </app-status-title>
+</div>
+<div>
+  <app-order-options-launch-results (cambiarOrden)="changeLaunchsOrder($event)"></app-order-options-launch-results>
+  <app-launches-result [data]="launches$ | async"></app-launches-result>
+  <app-launches-result-counter [count]="(launches$ | async) ? (launches$ | async)?.length : 0"></app-launches-result-counter>
+</div>
+<div style="margin-bottom:25px">
+  <a href="/status"><button>Atrás</button></a>
+</div>
